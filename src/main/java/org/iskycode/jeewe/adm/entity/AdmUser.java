@@ -1,5 +1,6 @@
 package org.iskycode.jeewe.adm.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.iskycode.jeewe.sys.entity.BaseEntity;
 
 public class AdmUser extends BaseEntity {
@@ -11,6 +12,7 @@ public class AdmUser extends BaseEntity {
     // 昵称
     private String nickname;
     // 密码
+    @JsonIgnore
     private String password;
     // 性别
     private String gender;
