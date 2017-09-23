@@ -5,7 +5,6 @@ import org.iskycode.jeewe.sys.entity.BaseEntity;
 
 public class AdmUser extends BaseEntity {
 
-
     private String id;
     // 用户名
     private String name;

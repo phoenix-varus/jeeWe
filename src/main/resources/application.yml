@@ -29,8 +29,20 @@ spring:
 server:
   port: 80
 #
-# 权限模块配置（此处关闭权限主要为了actuator监控模块正常使用）
+# 原有权限模块配置（此处关闭权限主要为了actuator监控模块正常使用）
 #
 management:
   security:
     enabled: false
+#
+# Shiro权限模块配置
+#
+shiro:
+  filter:
+    loginUrl: /l/tologin
+    successUrl: /a/index
+  cookie:
+    name: remeberMe
+    # cookie生效时间30天 ,单位秒
+    maxAge: 259200
+

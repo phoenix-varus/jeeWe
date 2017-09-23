@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 @Configuration
-public class DruidSettings {
+public class DruidConfiguration {
 
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
