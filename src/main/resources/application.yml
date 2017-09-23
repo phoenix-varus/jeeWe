@@ -13,6 +13,16 @@ spring:
     view:
       prefix: /WEB-INF/
       suffix: .jsp
+    # 根据后缀名实现多种视图解析
+    viewManager:
+      # 启用后缀名作为返回视图类型标识。默认为true
+      favorPathExtension: true
+      # 忽略请求头中的回调申明，仅按后缀名判定返回视图类型。 默认为false
+      ignoreAcceptHeader: true
+      # 启用参数申明返回视图类型。默认为true
+      favorParameter: false
+      # 默认解析类型
+      defaultContentType: text/html
 #
 # Spring Boot 内置Tomcat端口配置
 #
