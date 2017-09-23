@@ -1,0 +1,6 @@
+spring:
+  profiles: development
+db:
+  url: jdbc:mysql://localhost:3306/puppet
+  username: root
+  password: root
