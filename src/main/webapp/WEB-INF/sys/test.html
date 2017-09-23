@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <!--JQuery-->
+    <script src="../../static/js/jquery.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="../../static/plugin/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--FileUpload-->
+    <script src="../../static/js/fileinput.js"></script>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="../../static/plugin/bootstrap/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="../../static/plugin/bootstrap/css/bootstrap.min.css"/>
+
+    <!--FileUpload-->
+    <link rel="stylesheet" href="../../static/css/fileinput.min.css"/>
+
+    <!--Icon-->
+    <link rel="shortcut icon" href=""/>
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"/>
+
+    <!--Font-->
+    <style>
+        @font-face {
+            font-family: 'dnmbxsxd';
+            src: url('../../static/fonts/duanningmaobixingshuxiuding.ttf');
+        }
+    </style>
+    <style>
+        html, body, .page {
+            margin: 0px;
+            height: 100%;
+        }
+
+        .login-div {
+            display: table;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 200px;
+            right: 0;
+            width: 350px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: dnmbxsxd;
+        }
+
+        .i-btn-group {
+            width: 100%;
+        }
+
+        .login-copyright {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="login-div">
+        <h2>注册一下，开始修仙</h2>
+        <br/>
+        <form class="login-form" role="form" method="post" action="">
+            <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"
+                                                       aria-hidden="true"></i></span>
+                <input class="form-control" id="username" name="username" type="text" placeholder="用户名"/>
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input class="form-control" id="password" name="password" type="password" placeholder="密码"/>
+            </div>
+            <br/>
+            <div class="btn-group i-btn-group">
+                <button type="submit" class="btn btn-default btn-block">提交</button>
+            </div>
+        </form>
+        <br>
+    </div>
+    <div class="login-copyright">CopyRight©2017 JeeSky - iSkyCode</div>
+</div>
+</body>
+</html>
