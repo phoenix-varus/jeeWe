@@ -1,6 +1,7 @@
 spring:
   profiles: development
-db:
-  url: jdbc:mysql://localhost:3306/puppet
-  username: root
-  password: root
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/puppet?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
