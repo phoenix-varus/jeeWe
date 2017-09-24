@@ -7,13 +7,18 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+/**
+ * @author phoenix
+ *
+ *         Druid数据池配置工具类
+ */
 @Configuration
 public class DruidConfiguration {
 
-    @Bean
-    @ConfigurationProperties(prefix = "spring.datasource")
-    public DataSource druidDataSource() {
-        DruidDataSource druidDataSource = new DruidDataSource();
-        return druidDataSource;
-    }
+	@Bean
+	@ConfigurationProperties(prefix = "spring.datasource")
+	public DataSource druidDataSource() {
+		DruidDataSource druidDataSource = new DruidDataSource();
+		return druidDataSource;
+	}
 }

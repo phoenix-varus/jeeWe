@@ -15,37 +15,42 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author phoenix
+ *
+ *         Spring MVC配置工具类
+ */
 @Configuration
 public class MvcViewConfiguration {
 
-    @Bean
-    @ConfigurationProperties("spring.mvc.viewManager")
-    public ContentNegotiationManager contentNegotiationManager() {
-        // 声明contentNegotiationManagerFactory工厂实例，并根据配置参数填充对象。
-        ContentNegotiationManagerFactoryBean contentNegotiationManagerFactory = new ContentNegotiationManagerFactoryBean();
-        // 手动填充mediaTypes参数
-        Map<String, MediaType> mediaTypes = new HashMap();
-        mediaTypes.put("json", MediaType.APPLICATION_JSON_UTF8);
-        mediaTypes.put("xml", MediaType.APPLICATION_XML);
-        contentNegotiationManagerFactory.addMediaTypes(mediaTypes);
-        // 返回contentNegotiationManager对象
-        return contentNegotiationManagerFactory.getObject();
-    }
+	@Bean
+	@ConfigurationProperties("spring.mvc.viewManager")
+	public ContentNegotiationManager contentNegotiationManager() {
+		// 声明contentNegotiationManagerFactory工厂实例，并根据配置参数填充对象。
+		ContentNegotiationManagerFactoryBean contentNegotiationManagerFactory = new ContentNegotiationManagerFactoryBean();
+		// 手动填充mediaTypes参数
+		Map<String, MediaType> mediaTypes = new HashMap<String, MediaType>();
+		mediaTypes.put("json", MediaType.APPLICATION_JSON_UTF8);
+		mediaTypes.put("xml", MediaType.APPLICATION_XML);
+		contentNegotiationManagerFactory.addMediaTypes(mediaTypes);
+		// 返回contentNegotiationManager对象
+		return contentNegotiationManagerFactory.getObject();
+	}
 
-    @Bean
-    public ContentNegotiatingViewResolver contentNegotiatingViewResolver() {
-        // 声明contentNegotiatingViewResolver实例。
-        ContentNegotiatingViewResolver contentNegotiatingViewResolver = new ContentNegotiatingViewResolver();
-        contentNegotiatingViewResolver.setOrder(1);
-        contentNegotiatingViewResolver.setContentNegotiationManager(contentNegotiationManager());
+	@Bean
+	public ContentNegotiatingViewResolver contentNegotiatingViewResolver() {
+		// 声明contentNegotiatingViewResolver实例。
+		ContentNegotiatingViewResolver contentNegotiatingViewResolver = new ContentNegotiatingViewResolver();
+		contentNegotiatingViewResolver.setOrder(1);
+		contentNegotiatingViewResolver.setContentNegotiationManager(contentNegotiationManager());
 
-        // 手动添加视图解决方案
-        List<View> viewList = new ArrayList<View>();
-        // Json视图解决方案
-        MappingJackson2JsonView jsonView = new MappingJackson2JsonView();
-        viewList.add(jsonView);
-        contentNegotiatingViewResolver.setDefaultViews(viewList);
-        // 返回contentNegotiatingViewResolver对象
-        return contentNegotiatingViewResolver;
-    }
+		// 手动添加视图解决方案
+		List<View> viewList = new ArrayList<View>();
+		// Json视图解决方案
+		MappingJackson2JsonView jsonView = new MappingJackson2JsonView();
+		viewList.add(jsonView);
+		contentNegotiatingViewResolver.setDefaultViews(viewList);
+		// 返回contentNegotiatingViewResolver对象
+		return contentNegotiatingViewResolver;
+	}
 }
