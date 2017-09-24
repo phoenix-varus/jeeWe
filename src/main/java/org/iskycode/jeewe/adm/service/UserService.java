@@ -17,7 +17,7 @@ public class UserService {
     UserDao userDao;
 
     public List<Map> findAll() {
-        return (List<Map>) userDao.findAll();
+        return (List<Map>) userDao.findAll(new AdmUser());
     }
 
     public List<AdmRole> findRolesByName(String username) {
@@ -30,5 +30,8 @@ public class UserService {
 
     public AdmUser findUserByName(String username) {
         return null;
+    }
+
+    public void save(AdmUser user) {
     }
 }
