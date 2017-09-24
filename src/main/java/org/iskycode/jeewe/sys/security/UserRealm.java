@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -31,18 +32,18 @@ public class UserRealm extends AuthorizingRealm {
         String username = (String) principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         // 根据用户名查询当前用户拥有的角色
-        List<AdmRole> roles = userService.findRolesByName(username);
+        List<Map> roles = userService.findRolesByName(username);
         Set<String> roleNames = new HashSet<String>();
-        for (AdmRole role : roles) {
-            roleNames.add(role.getName());
+        for (Map role : roles) {
+            roleNames.add(role.get("name").toString());
         }
         // 将角色名称提供给info
         authorizationInfo.setRoles(roleNames);
         // 根据用户名查询当前用户权限
-        List<AdmPermission> permissions = userService.findPermissionsByName(username);
+        List<Map> permissions = userService.findPermissionsByName(username);
         Set<String> permissionNames = new HashSet<String>();
-        for (AdmPermission permission : permissions) {
-            permissionNames.add(permission.getName());
+        for (Map permission : permissions) {
+            permissionNames.add(permission.get("name").toString());
         }
         // 将权限名称提供给info
         authorizationInfo.setStringPermissions(permissionNames);
