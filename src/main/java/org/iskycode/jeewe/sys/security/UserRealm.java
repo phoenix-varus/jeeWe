@@ -32,7 +32,7 @@ public class UserRealm extends AuthorizingRealm {
         String username = (String) principals.getPrimaryPrincipal();
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         // 根据用户名查询当前用户拥有的角色
-        List<Map> roles = userService.findRolesByName(username);
+        List<Map> roles = userService.findRolesByUserName(username);
         Set<String> roleNames = new HashSet<String>();
         for (Map role : roles) {
             roleNames.add(role.get("name").toString());
@@ -40,7 +40,7 @@ public class UserRealm extends AuthorizingRealm {
         // 将角色名称提供给info
         authorizationInfo.setRoles(roleNames);
         // 根据用户名查询当前用户权限
-        List<Map> permissions = userService.findPermissionsByName(username);
+        List<Map> permissions = userService.findPermissionsByUserName(username);
         Set<String> permissionNames = new HashSet<String>();
         for (Map permission : permissions) {
             permissionNames.add(permission.get("name").toString());

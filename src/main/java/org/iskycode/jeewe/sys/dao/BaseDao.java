@@ -3,9 +3,8 @@ package org.iskycode.jeewe.sys.dao;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
-import java.util.Map;
 
-public interface BaseDao {
+public interface BaseDao<T> {
 
 
     @InsertProvider(type = BaseProvider.class, method = "saveSql")
@@ -25,11 +24,11 @@ public interface BaseDao {
     public void deleteOrByExample(Object obj);
 
     @SelectProvider(type = BaseProvider.class, method = "findAndByExampleSql")
-    public List<Map> findAndByExample(Object obj);
+    public List<T> findAndByExample(Object obj);
 
     @SelectProvider(type = BaseProvider.class, method = "findOrByExampleSql")
-    public List<Map> findOrByExample(Object obj);
+    public List<T> findOrByExample(Object obj);
 
     @SelectProvider(type = BaseProvider.class, method = "findAllSql")
-    public List<Map> findAll(Object obj);
+    public List<T> findAll(Object obj);
 }
