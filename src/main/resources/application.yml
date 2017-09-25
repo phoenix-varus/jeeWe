@@ -1,41 +1,41 @@
 #
-# Spring Boot È«¾ÖÅäÖÃ
+# Spring Boot å…¨å±€é…ç½®
 #
 spring:
-  # DataSourceÊôĞÔÅäÖÃ
+  # DataSourceå±æ€§é…ç½®
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/puppet?useUnicode=true&characterEncoding=utf-8
     username: root
     password: root
   mvc:
-    # Ä¬ÈÏÊÓÍ¼ÊôĞÔÅäÖÃ
+    # é»˜è®¤è§†å›¾å±æ€§é…ç½®
     view:
       prefix: /WEB-INF/
       suffix: .jsp
-    # ¸ù¾İºó×ºÃûÊµÏÖ¶àÖÖÊÓÍ¼½âÎö
+    # æ ¹æ®åç¼€åå®ç°å¤šç§è§†å›¾è§£æ
     viewManager:
-      # ÆôÓÃºó×ºÃû×÷Îª·µ»ØÊÓÍ¼ÀàĞÍ±êÊ¶¡£Ä¬ÈÏÎªtrue
+      # å¯ç”¨åç¼€åä½œä¸ºè¿”å›è§†å›¾ç±»å‹æ ‡è¯†ã€‚é»˜è®¤ä¸ºtrue
       favorPathExtension: true
-      # ºöÂÔÇëÇóÍ·ÖĞµÄ»Øµ÷ÉêÃ÷£¬½ö°´ºó×ºÃûÅĞ¶¨·µ»ØÊÓÍ¼ÀàĞÍ¡£ Ä¬ÈÏÎªfalse
+      # å¿½ç•¥è¯·æ±‚å¤´ä¸­çš„å›è°ƒç”³æ˜ï¼Œä»…æŒ‰åç¼€ååˆ¤å®šè¿”å›è§†å›¾ç±»å‹ã€‚ é»˜è®¤ä¸ºfalse
       ignoreAcceptHeader: true
-      # ÆôÓÃ²ÎÊıÉêÃ÷·µ»ØÊÓÍ¼ÀàĞÍ¡£Ä¬ÈÏÎªtrue
+      # å¯ç”¨å‚æ•°ç”³æ˜è¿”å›è§†å›¾ç±»å‹ã€‚é»˜è®¤ä¸ºtrue
       favorParameter: false
-      # Ä¬ÈÏ½âÎöÀàĞÍ
+      # é»˜è®¤è§£æç±»å‹
       defaultContentType: text/html
 #
-# Spring Boot ÄÚÖÃTomcat¶Ë¿ÚÅäÖÃ
+# Spring Boot å†…ç½®Tomcatç«¯å£é…ç½®
 #
 server:
   port: 80
 #
-# Ô­ÓĞÈ¨ÏŞÄ£¿éÅäÖÃ£¨´Ë´¦¹Ø±ÕÈ¨ÏŞÖ÷ÒªÎªÁËactuator¼à¿ØÄ£¿éÕı³£Ê¹ÓÃ£©
+# åŸæœ‰æƒé™æ¨¡å—é…ç½®ï¼ˆæ­¤å¤„å…³é—­æƒé™ä¸»è¦ä¸ºäº†actuatorç›‘æ§æ¨¡å—æ­£å¸¸ä½¿ç”¨ï¼‰
 #
 management:
   security:
     enabled: false
 #
-# ShiroÈ¨ÏŞÄ£¿éÅäÖÃ
+# Shiroæƒé™æ¨¡å—é…ç½®
 #
 shiro:
   filter:
@@ -43,6 +43,6 @@ shiro:
     successUrl: /a/index
   cookie:
     name: remeberMe
-    # cookieÉúĞ§Ê±¼ä30Ìì ,µ¥Î»Ãë
+    # cookieç”Ÿæ•ˆæ—¶é—´30å¤© ,å•ä½ç§’
     maxAge: 259200
 

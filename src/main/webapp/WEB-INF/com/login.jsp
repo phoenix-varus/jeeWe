@@ -8,7 +8,7 @@
 <head>
 <title>登录</title>
 <!-- TLDs -->
-<%@ taglib prefix="jk" uri="../tlds/jeesky.tld"%>
+<%@ taglib prefix="jk" uri="../tlds/jeewe.tld"%>
 <%--Taglib--%>
 <jsp:include page="../sys/taglib.jsp"></jsp:include>
 <script type="application/javascript" src="<%=basePath%>static/js/login/login.js"></script>

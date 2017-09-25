@@ -11,9 +11,9 @@ import org.iskycode.jeewe.adm.entity.AdmUser;
 import org.iskycode.jeewe.adm.service.UserService;
 import org.iskycode.jeewe.sys.util.Const;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
@@ -25,7 +25,7 @@ import java.util.Map;
  *         登录管理接口层
  */
 @RequestMapping(Const.LOGIN_PATH)
-@RestController
+@Controller
 public class LoginController {
 
 	@Autowired
