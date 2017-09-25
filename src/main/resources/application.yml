@@ -2,6 +2,9 @@
 # Spring Boot 全局配置
 #
 spring:
+  output:
+    ansi:
+      enabled: always
   # DataSource属性配置
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
