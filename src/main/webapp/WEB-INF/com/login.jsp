@@ -57,7 +57,7 @@
                 <div class="card p-5 i-login-card-div">
                     <div class="card-body">
                         <h1 class="mb-4 text-center i-login-title-h">道友今来，何不修仙</h1>
-                        <form class="mt-5" role="form" action="">
+                        <div class="mt-5">
                             <div class="form-group input-group">
                                 <span class="input-group-addon i-addon-span"><i class="fa fa-user"></i></span>
                                 <input type="text" class="form-control" id="username" name="username"
@@ -66,8 +66,8 @@
                                 <span class="input-group-addon i-addon-span"><i class="fa fa-lock"></i></span>
                                 <input type="password" class="form-control" id="password" name="password"
                                        placeholder="请输入密码"></div>
-                            <button type="submit" class="btn i-login-btn" onclick="login()">登录</button>
-                        </form>
+                            <button class="btn i-login-btn" onclick="login()">登录</button>
+                        </div>
                     </div>
                 </div>
             </div>
