@@ -9,7 +9,7 @@ function login() {
     }
 
     $.ajax({
-        type: 'POST',
+        type: 'post',
         data: {
             username: $("#username").val(),
             password: $("#password").val()
