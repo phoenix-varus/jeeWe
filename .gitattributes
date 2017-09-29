@@ -1,0 +1,12 @@
+*.js linguist-language=JavaScript
+*.css linguist-language=CSS
+*.html linguist-language=HTML
+*.xml linguist-language=XML
+*.ttf linguist-language=Java
+*.eot linguist-language=Java
+*.svg linguist-language=Java
+*.woff linguist-language=Java
+*.woff2 linguist-language=Java
+*.gif linguist-language=Java
+*.jpg linguist-language=Java
+*.png linguist-language=Java
