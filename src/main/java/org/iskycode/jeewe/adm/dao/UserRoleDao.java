@@ -18,4 +18,7 @@ public interface UserRoleDao extends BaseDao<Map> {
 
     @Select("<script></script>")
     public List<Map> findRolesByUserName(String username);
+
+    @Select("<script></script>")
+    public List<Map> findPermissionsByUserName(String username);
 }
