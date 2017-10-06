@@ -12,48 +12,38 @@ import java.util.Map;
 
 /**
  * @author phoenix
- *
- *         用户业务处理层
+ * <p>
+ * 用户业务处理层
  */
 @Service
 public class UserService {
 
-	@Autowired
-	UserDao userDao;
+    @Autowired
+    UserDao userDao;
 
-	@Autowired
-	UserRoleDao userRoleDao;
+    public List<AdmUser> findAll() {
+        return userDao.findAll(new AdmUser());
+    }
 
-	@Autowired
-	RolePermissionDao rolePermissionDao;
+    @SuppressWarnings("rawtypes")
+    public List<Map> findRolesByUserName(String username) {
+        return userDao.findRolesByUserName(username);
+    }
 
-	public List<AdmUser> findAll() {
-		return userDao.findAll(new AdmUser());
-	}
+    @SuppressWarnings("rawtypes")
+    public List<Map> findPermissionsByUserName(String username) {
+        return userDao.findPermissionsByUserName(username);
+    }
 
-	@SuppressWarnings("rawtypes")
-	public List<Map> findRolesByUserName(String username) {
-		AdmUser user = new AdmUser();
-		user.setName(username);
-		return userRoleDao.findAndByExample(user);
-	}
+    public AdmUser findUserByName(String username) {
+        AdmUser user = new AdmUser();
+        user.setName(username);
+        List<AdmUser> users = userDao.findAndByExample(user);
+        AdmUser result = users.get(0);
+        return result;
+    }
 
-	@SuppressWarnings("rawtypes")
-	public List<Map> findPermissionsByUserName(String username) {
-		AdmUser user = new AdmUser();
-		user.setName(username);
-		return rolePermissionDao.findAndByExample(user);
-	}
-
-	public AdmUser findUserByName(String username) {
-		AdmUser user = new AdmUser();
-		user.setName(username);
-		List<AdmUser> users = userDao.findAndByExample(user);
-		AdmUser result = users.get(0);
-		return result;
-	}
-
-	public void save(AdmUser user) {
-		userDao.save(user);
-	}
+    public void save(AdmUser user) {
+        userDao.save(user);
+    }
 }
