@@ -1,8 +1,6 @@
 package org.iskycode.jeewe.adm.service;
 
-import org.iskycode.jeewe.adm.dao.RolePermissionDao;
 import org.iskycode.jeewe.adm.dao.UserDao;
-import org.iskycode.jeewe.adm.dao.UserRoleDao;
 import org.iskycode.jeewe.adm.entity.AdmUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
