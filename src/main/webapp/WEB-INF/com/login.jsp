@@ -56,7 +56,7 @@
             <div class="col-md-6">
                 <div class="card p-5 i-login-card-div">
                     <div class="card-body">
-                        <h1 class="mb-4 text-center i-login-title-h">道友今来，何不修仙</h1>
+                        <h1 class="mb-4 text-center i-login-title-h">止戈流，开阵~</h1>
                         <div class="mt-5">
                             <div class="form-group input-group">
                                 <span class="input-group-addon i-addon-span"><i class="fa fa-user"></i></span>
