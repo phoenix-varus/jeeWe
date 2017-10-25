@@ -19,7 +19,7 @@
 <script src="<%=basePath%>static/js/fileinput.js"></script>
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="<%=basePath%>static/plugin/bootstrap/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" href="<%=basePath%>static/plugin/bootstrap/css/bootstrap-grid.min.css"/>
 <link rel="stylesheet" href="<%=basePath%>static/plugin/bootstrap/css/bootstrap.min.css"/>
 
 <!--FileUpload-->

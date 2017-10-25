@@ -1,5 +1,6 @@
 package org.iskycode.jeewe.adm.service;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.iskycode.jeewe.adm.dao.UserDao;
 import org.iskycode.jeewe.adm.entity.AdmUser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,9 @@ public class UserService {
         AdmUser user = new AdmUser();
         user.setName(username);
         List<AdmUser> users = userDao.findAndByExample(user);
+        if (CollectionUtils.isEmpty(users)) {
+            return null;
+        }
         AdmUser result = users.get(0);
         return result;
     }
